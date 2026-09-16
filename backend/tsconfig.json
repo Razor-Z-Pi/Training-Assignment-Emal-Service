@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "resolvePackageJsonExports": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
+    "module": "commonjs",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -15,8 +11,10 @@
     "outDir": "./dist",
     "incremental": true,
     "skipLibCheck": true,
-    "strict": true,
-    "strictPropertyInitialization": false,
-    "types": ["vitest/globals", "node"]
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "noFallthroughCasesInSwitch": true
   }
 }
