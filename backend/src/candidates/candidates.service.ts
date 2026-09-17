@@ -21,14 +21,14 @@ export class CandidatesService {
       avatarUrl: 'https://i.pravatar.cc/150?u=ivan',
     },
     {
-      id: 'cand_2', fullName: 'Anna Smith',
-      position: 'Frontend Developer', email: 'anna.smith@example.com',
+      id: 'cand_2', fullName: 'Гордон Фримен',
+      position: 'DevOps Engineer', email: 'gordon@example.com',
       linkedinUrl: 'https://linkedin.com/in/anna-smith',
       avatarUrl: 'https://i.pravatar.cc/150?u=anna',
     },
     {
       id: 'cand_3', fullName: 'Иван Иванов', firstName: 'Иван', lastName: 'Иванов',
-      position: 'DevOps Engineer',
+      position: 'Frontend Engineer',
       linkedinUrl: 'https://linkedin.com/in/sergey-volkov',
       avatarUrl: 'https://i.pravatar.cc/150?u=sergey',
     },
