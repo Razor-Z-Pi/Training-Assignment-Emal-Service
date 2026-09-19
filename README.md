@@ -47,7 +47,7 @@ Backend на NestJS + frontend на React (Vite + react-bootstrap), реализ
 - Шаблон с переменными вида `{{firstName}}`, `{{projectTitle}}`.
 - Live-предпросмотр готового письма с подстановкой реальных данных кандидата.
 - Подсветка полей, которых не хватает для отправки.
-- Обработка fallback-переменных (`firstName` → `fullName`).
+- Обработка fallback-переменных (`firstName` => `fullName`).
 - Явный сигнал «отправлять рано», если чего-то не хватает.
 
 ### Flow 3. Отправить письмо
@@ -55,17 +55,14 @@ Backend на NestJS + frontend на React (Vite + react-bootstrap), реализ
 - Журнал отправленных писем со статусами `pending | sent | failed`.
 - Различение «не отправилось» и «отправилось, но не записалось».
 - Обработка ошибок Gmail (quota, revoked token, provider error).
-- Моковые карточки кандидатов с LinkedIn-профилем.
-
 ---
 
 ## Архитектура
 
 - **Frontend** — Vite dev-server на 5173, проксирует `/api/*` на backend.
 - **Backend** — NestJS на 3001, JWT-guard на всех защищённых endpoints.
-- **Хранилище** — in-memory (`Map`). Подходит для учебного задания; в проде заменяется на Postgres/Redis без изменения контрактов.
+- **Хранилище** — in-memory (`Map`). в продакшине можно заменить к примеру на Postgres/Redis без изменения контрактов.
 - **Шифрование токенов** — AES-256-GCM, ключ из `.env`.
-
 ---
 
 ## Требования
@@ -73,7 +70,6 @@ Backend на NestJS + frontend на React (Vite + react-bootstrap), реализ
 - **Node.js** 20+ (рекомендуется LTS).
 - **npm** 11+ (в npm 10.x есть баг `edgesOut` при установке тяжёлых пакетов; если у тебя 10.x — обнови до 11.x: `npm i -g npm@latest`).
 - Аккаунт Google Cloud с созданным OAuth 2.0 Client ID (см. [Настройка Google OAuth](#настройка-google-oauth)).
-
 ---
 
 ## Быстрый старт
