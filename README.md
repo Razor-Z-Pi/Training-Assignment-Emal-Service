@@ -63,7 +63,7 @@ Backend на NestJS + frontend на React (Vite + react-bootstrap), реализ
 
 - **Frontend** — Vite dev-server на 5173, проксирует `/api/*` на backend.
 - **Backend** — NestJS на 3001, JWT-guard на всех защищённых endpoints.
-- **Хранилище** — in-memory (`Map`). Подходит для учебного задания; в проде заменяется на Postgres/Redis без изменения контрактов.
+- **Хранилище** — in-memory (`Map`). в продакшине можно заменить к примеру на Postgres/Redis без изменения контрактов.
 - **Шифрование токенов** — AES-256-GCM, ключ из `.env`.
 
 ---
