@@ -48,6 +48,7 @@ export class GmailService {
   async handleCallback(code: string, state: string) {
     const { userId } = this.stateService.verify(state);
     const { tokens } = await this.oauth2Client.getToken(code);
+
     this.oauth2Client.setCredentials(tokens);
     const oauth2 = google.oauth2({ version: 'v2', auth: this.oauth2Client });
     const { data: profile } = await oauth2.userinfo.get();
@@ -61,6 +62,7 @@ export class GmailService {
       scopes: tokens.scope!.split(' '),
       revoked: false,
     });
+
     return { email: profile.email };
   }
 
@@ -69,7 +71,7 @@ export class GmailService {
     if (!conn) return;
     try {
       await this.oauth2Client.revokeToken(this.crypto.decrypt(conn.refreshTokenEnc));
-    } catch { /* ignore revoke errors */ }
+    } catch {
     this.connections.delete(userId);
   }
 
