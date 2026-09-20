@@ -25,7 +25,7 @@ export default function Settings() {
 
   return (
     <>
-      <h2 className="mb-4">Настройки</h2>
+      <h2 className="mb-4 text-dark">Настройки</h2>
 
       {gmailParam === 'connected' && (
         <Alert variant="success">Gmail успешно подключён</Alert>

@@ -73,6 +73,7 @@ export class GmailService {
       await this.oauth2Client.revokeToken(this.crypto.decrypt(conn.refreshTokenEnc));
     } catch {
     this.connections.delete(userId);
+    } 
   }
 
   async sendEmail(userId: string, to: string, subject: string, body: string) {

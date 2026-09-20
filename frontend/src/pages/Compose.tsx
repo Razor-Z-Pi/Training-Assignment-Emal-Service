@@ -88,7 +88,7 @@ export default function Compose() {
 
   return (
     <>
-      <h2 className="mb-4 fw-bold">Написать письмо!!!</h2>
+      <h2 className="mb-4 text-dark">Написать письмо!!!</h2>
 
       <Row className="g-4">
         <Col lg={6}>
